@@ -12,9 +12,9 @@ export default function Contacto() {
       <div className="grid gap-4 md:grid-cols-2">
         <Card className="p-6 space-y-2">
           <div className="text-lg font-semibold">Datos</div>
-          <div className="text-sm text-zinc-700">📍 Calle Ejemplo 12, [Ciudad]</div>
+          <div className="text-sm text-zinc-700">📍 Calle Ejemplo?? , Navia</div>
           <div className="text-sm text-zinc-700">📞 +34 600 000 000</div>
-          <div className="text-sm text-zinc-700">✉️ contacto@tu-dominio.com</div>
+          <div className="text-sm text-zinc-700">✉️ lperez21@ucm.es</div>
           <div className="text-sm text-zinc-700">🕘 L–V 9:00–18:00</div>
           <div className="pt-3 text-sm text-zinc-600">
             * No envíes información sensible por el formulario si no es necesario.
