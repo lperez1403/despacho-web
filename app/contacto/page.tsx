@@ -14,7 +14,7 @@ export default function Contacto() {
           <div className="text-lg font-semibold">Datos</div>
           <div className="text-sm text-zinc-700">📍 Calle Ejemplo?? , Navia</div>
           <div className="text-sm text-zinc-700">📞 +34 600 000 000</div>
-          <div className="text-sm text-zinc-700">✉️ lperez21@ucm.es</div>
+          <div className="text-sm text-zinc-700">✉️ correooo@prueba.es</div>
           <div className="text-sm text-zinc-700">🕘 L–V 9:00–18:00</div>
           <div className="pt-3 text-sm text-zinc-600">
             * No envíes información sensible por el formulario si no es necesario.
