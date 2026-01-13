@@ -56,19 +56,28 @@ export async function POST(req: Request) {
   `;
 
   try {
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: FROM,
       to: TO,
       replyTo: email,
       subject,
       html,
     });
-    return NextResponse.json({ ok: true, mode: "email" });
+  
+    // 👇 Si Resend devuelve error, lo vemos
+    if ((result as any).error) {
+      console.log("RESEND ERROR:", (result as any).error);
+      return NextResponse.json(
+        { ok: false, mode: "email", resendError: (result as any).error },
+        { status: 500 }
+      );
+    }
+  
+    console.log("RESEND OK:", result);
+    return NextResponse.json({ ok: true, mode: "email", result });
   } catch (e: any) {
-    return NextResponse.json(
-      { error: "No se pudo enviar el email" },
-      { status: 500 }
-    );
+    console.log("RESEND EXCEPTION:", e);
+    return NextResponse.json({ error: "No se pudo enviar el email" }, { status: 500 });
   }
 }
 
