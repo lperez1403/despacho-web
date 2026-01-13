@@ -42,4 +42,4 @@ npm run dev
 # cuando me gusta
 git add .
 git commit -m "descripcion clara"
-git push
+git push ooo
